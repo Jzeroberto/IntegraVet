@@ -10,7 +10,8 @@
 </head>
 
 <body class="body">
-  <form class="form">
+  <form action="{{ url_for('menu.menu') }}" method="post" class="form">
+    <img src="{{ url_for('static', filename='logo_integravet.png') }}">
     <p class="form-title">Entre na sua conta!</p>
     <div class="input-container">
       <input placeholder="Enter email" type="email">
@@ -38,7 +39,6 @@
     <button class="submit" type="submit">
       Entrar
     </button>
-
     <p class="signup-link">
       Ainda não possui conta?
       <a href="{{ url_for('register.register') }}">Cadastre-se</a>

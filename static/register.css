@@ -58,7 +58,6 @@ body {
     animation: pulse 1s linear infinite;
 }
 
-.message,
 .signin {
     color: rgba(88, 87, 87, 0.822);
     font-size: 14px;
