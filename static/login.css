@@ -1,16 +1,15 @@
-/* Adicione isso para garantir que o body e o html ocupem toda a altura da tela */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
 
-/* Centraliza o conteúdo no body */
 .body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
-  background-color: #4b9fcf; /* Uma cor de fundo opcional para contraste */
+  min-height: 100vh;
+  background-color: #4b9fcf;
 }
 
 .form {
@@ -35,7 +34,8 @@ html, body {
   position: relative;
 }
 
-.input-container input, .form button {
+.input-container input,
+.form button {
   outline: none;
   border: 1px solid #e5e7eb;
   margin: 8px 0;
@@ -94,4 +94,20 @@ html, body {
 
 .signup-link a {
   text-decoration: underline;
+}
+
+.submit:hover {
+  background-color: rgb(56, 90, 194);
+}
+
+@keyframes pulse {
+  from {
+      transform: scale(0.9);
+      opacity: 1;
+  }
+
+  to {
+      transform: scale(1.8);
+      opacity: 0;
+  }
 }

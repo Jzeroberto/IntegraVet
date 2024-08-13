@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+    <title>IntegraVet</title>
+</head>
+
+<body class="body">
+    <form class="form">
+        <p class="title">Registro </p>
+        <p class="message">Cadastre-se agora. </p>
+        <div class="flex">
+            <label>
+                <input required="" type="text" class="input">
+                <span>Primeiro Nome</span>
+            </label>
+
+            <label>
+                <input required="" type="text" class="input">
+                <span>Sobrenome</span>
+            </label>
+        </div>
+
+        <label>
+            <input required="" type="email" class="input">
+            <span>Email</span>
+        </label>
+
+        <label>
+            <input required="" type="password" class="input">
+            <span>Senha</span>
+        </label>
+        <label>
+            <input required="" type="password" class="input">
+            <span>Confirmar senha</span>
+        </label>
+        <button class="submit">Cadastrar</button>
+        <p class="signin">Já possui uma conta? <a href="{{ url_for('login.login') }}">Faça login</a> </p>
+    </form>
+</body>
+
+</html>
