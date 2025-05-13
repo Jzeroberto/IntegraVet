@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IntegraVet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='principal.css') }}">
 </head>
-
 <body>
-    <p>aa</p>
+    <nav class="navbar">
+        <h1>IntegraVet</h1>
+        <ul class="nav-links">
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#contact">Contato</a></li>
+            <li><a href="{{ url_for('login.login') }}">Sair</a></li>
+        </ul>
+    </nav>
+    <header class="hero">
+        <h2>Cuidando do seu Pet com Carinho</h2>
+        <p>Oferecemos os melhores serviços para seu animal de estimação.</p>
+        <img src="{{ url_for('static', filename='images/meu_pet.jpg') }}" alt="Veterinary Hero Image">
+        <br>
+        <form action="{{ url_for('meu_pet.meu_pet') }}" method="POST">
+            <button type="submit" class="cta-button">MEU PET</button>
+        </form>
+    </header>
+    <section id="services" class="services">
+        <h2>Serviços</h2>
+        <div class="carousel-container">
+            <button class="prev-btn" onclick="scrollCarousel(-1)">&#10094;</button>
+            <div class="carousel">
+                {% for servico in servicos %}
+                <div class="service-card">
+                    <a href="{{ url_for(servico['rota']) }}">
+                        <img src="{{ url_for('static', filename='images/' + servico['imagem'].split('/')[-1]) }}" alt="{{ servico['nome'] }}">
+                        <p>{{ servico['nome'] }}</p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <button class="next-btn" onclick="scrollCarousel(1)">&#10095;</button>
+        </div>
+        <script>
+            function scrollCarousel(direction) {
+                const carousel = document.querySelector('.carousel');
+                const scrollAmount = 300; // Distância que o carrossel deve rolar
+        
+                carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            }
+        </script>
+    </section>
+    
+    
+    <footer>
+        <p>&copy; 2025 IntegraVet - Todos os direitos reservados.</p>
+    </footer>
 </body>
-
 </html>

@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #0077b6;
+    padding: 15px;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero {
+    background: #0096c7;
+    color: white;
+    padding: 50px;
+}
+
+.hero img {
+    width: 220px;
+    max-width: 600px;
+    height: 220px;
+    border-radius: 110px;
+    margin-top: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #48cae4;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 200px;
+    font-size: 25px; 
+    font-weight: bold; 
+    text-align: center; 
+    
+}
+.cta-button:hover {
+    background-color: rgb(56, 90, 194);
+  }
+
+.services {
+    padding: 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.service-card {
+    min-width: 200px; /* Tamanho mínimo para os cards */
+    flex-shrink: 0;
+    text-align: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    width: 150px;
+    height: auto;
+}
+
+
+.service-card button:hover {
+    background: #0077b6;
+}
+
+footer {
+    background: #0077b6;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Oculta a barra de rolagem */
+    width: 100%;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.prev-btn, .next-btn {
+    background-color: #48cae4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #0077b6;
+}

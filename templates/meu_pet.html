@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Pet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='meupet.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <h1>IntegraVet</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('principal.principal') }}">Início</a></li>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="{{ url_for('login.login') }}">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="pet-container">
+        <h2>Seus Pets</h2>
+        <div class="pet-list">        
+                {% for pet in pets %}
+                <div class="pet-card">
+                <h3>{{ pet ['nome'] }}</h3>
+                <p>{{ pet ['raça'] }}</p>
+                <p>{{ pet ['idade'] }}</p>
+            </div>
+            {% endfor %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Meu Pet - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
